@@ -38,6 +38,11 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 8
     steps:
+      - name: Run Lighthouse Badger
+        uses: foo-software/lighthouse-badger@v3
+        with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Preparatory Tasks
         run: |
           REPOSITORY=`expr "${{ env.REPO_BRANCH }}" : "\([^ ]*\)"`
