@@ -11,7 +11,6 @@ profile:
   more_info: >
     <p> sta. rosa, laguna 4026 </p>
     <p> philippines </p>
-    
 
 news: false # includes a list of news items
 selected_papers: false # includes a list of papers marked as "selected={true}"
