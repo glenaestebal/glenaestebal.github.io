@@ -2,13 +2,13 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: Securing My Path # the website title (if blank, full name will be used instead)
-first_name: Glena
+title: "Securing My Path" # the website title (if blank, full name will be used instead)
+first_name: "Glena"
 middle_name:
-last_name: Estebal
-email: estebalglena@gmail.com
+last_name: "Estebal"
+email: "estebalglena@gmail.com"
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Navigating the maze of Information Security one step at a time.
+  "Navigating the maze of Information Security one step at a time."
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
@@ -81,7 +81,7 @@ flickr_id: # your flickr id
 github_username: # your GitHub user name
 gitlab_username: # your GitLab user name
 ieee_id: # your ieeexplore.ieee.org/author/id
-inspirehep_id: 1010907 # Inspire HEP author ID
+inspirehep_id: # Inspire HEP author ID
 instagram_id: # your instagram id
 kaggle_id: # your kaggle id
 keybase_username: # your keybase user name
@@ -113,7 +113,7 @@ youtube_id: # your youtube channel id (youtube.com/@<youtube_id>)
 zotero_username: # your zotero username
 
 contact_note: >
-  You can reach me best through my email!
+  "You can reach me best through my email!"
 
 # -----------------------------------------------------------------------------
 # Analytics and search engine verification
