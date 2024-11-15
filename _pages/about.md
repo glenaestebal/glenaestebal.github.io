@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. per aspera ad astra
+subtitle: "<a href='#'>Affiliations</a>. per aspera ad astra"
 
 profile:
   align: right
