@@ -2,10 +2,3 @@ User-agent: *
 Disallow:
 
 Sitemap: https://glenaestebal.github.io/sitemap.xml
----
-permalink: /robots.txt
----
-User-agent: *
-Disallow:
-
-Sitemap: {{ site.baseurl | prepend: site.url }}/sitemap.xml
