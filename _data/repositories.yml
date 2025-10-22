@@ -1,14 +1,20 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - glenaestebal
+  # - torvalds
+  # - alshedivat
 
 repo_description_lines_max: 2
 
 github_repos:
-  - alshedivat/al-folio
-  - jekyll/jekyll
-  - twbs/bootstrap
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - mathjax/MathJax
-  - jpswalsh/academicons
+  - glenaestebal/SWeeT-ESP32-Thesis
+  - glenaestebal/nssecu3-mp2-mp3 
+  - glenaestebal/cssecdv-cs1 
+  - glenaestebal/cssecdv 
+  - glenaestebal/mobile-adhoc-protocol 
+  # - alshedivat/al-folio
+  # - jekyll/jekyll
+  # - twbs/bootstrap
+  # - jquery/jquery
+  # - FortAwesome/Font-Awesome
+  # - mathjax/MathJax
+  # - jpswalsh/academicons
