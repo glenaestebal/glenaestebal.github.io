@@ -33,6 +33,6 @@ I’m currently focused on upskilling through hands-on projects, certifications,
 
 This blog serves as my personal knowledge hub — a place to document my learning journey, project progress, and insights as I grow into a cybersecurity professional. You’ll find write-ups on my coursework, personal research, and experiments that explore how secure systems are designed, implemented, and managed.
 
-Outside of tech, I enjoy reading. I have also taken in journaling and learning how to bake.
+Outside of tech, I enjoy reading. I have also taken interest in journaling and learning how to bake.
 
 I believe in learning with intention, documenting with clarity, and growing with purpose — one project at a time.

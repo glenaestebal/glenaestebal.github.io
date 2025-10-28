@@ -7,6 +7,7 @@ repo_description_lines_max: 2
 
 github_repos:
   - glenaestebal/SWeeT-ESP32-Thesis
+  - glenaestebal/glenaestebal.github.io
   - glenaestebal/nssecu3-mp2-mp3 
   - glenaestebal/cssecdv-cs1 
   - glenaestebal/cssecdv 
