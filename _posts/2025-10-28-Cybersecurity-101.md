@@ -3,7 +3,7 @@ layout: post
 title: Cybersecurity 101
 date: 2025-10-28
 description: beginner friendly path for a solid introduction to the different areas in Computer Security
-tags: cybersecurity101
+tags: cybersecurity101 review
 # categories: sample-posts
 categories: posts
 ---
