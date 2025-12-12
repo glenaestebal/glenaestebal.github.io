@@ -1,13 +1,14 @@
 ---
 layout: post
-title: Cybersecurity 101
-date: 2025-10-28
+title: Cybersecurity 101 - Introduction
+date: 2025-10-30
 description: beginner friendly path for a solid introduction to the different areas in Computer Security
 tags: cybersecurity101 review
 # categories: sample-posts
-categories: cybersecurity-101
-featured: true
+categories: posts
 ---
+
+
 
 A beginner-friendly learning path in <a href = 'https://tryhackme.com/paths'> TryHackMe </a> providing a strong foundation in computer security. It introduces core concepts in networking, cryptography, and operating systems (Windows, Active Directory, and Linux), while exploring both offensive and defensive security tools. The program also offers insight into real-world applications and career paths in cybersecurity.
 
