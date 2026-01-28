@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Blog Introduction
-date: 2025-10-27
+date: 2025-11-27
 description: tracking my journey, past, present, and future — from my first steps in cybersecurity to everyday life, hobbies, and personal growth.
 tags: general
 # categories: sample-posts
