@@ -9,7 +9,7 @@ categories: cybersecurity-101
 featured: true
 ---
 
-A beginner-friendly learning path in <a href = 'https://tryhackme.com/paths'> TryHackMe </a> providing a strong foundation in computer security. It introduces core concepts in networking, cryptography, and operating systems (Windows, Active Directory, and Linux), while exploring both offensive and defensive security tools. The program also offers insight into real-world applications and career paths in cybersecurity.
+A beginner-friendly learning path in TryHackMe that provides a strong foundation in computer security. It introduces core concepts in networking, cryptography, and operating systems (Windows, Active Directory, and Linux), while exploring both offensive and defensive security tools. The program also offers insight into real-world applications and career paths in cybersecurity.
 
 
 #### Contents
