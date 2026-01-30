@@ -83,9 +83,34 @@ tags: presecurity review
 
 **Answer:** `http://fakebank.thm/bank-deposit`
 
+* The previous link leads to a secret page that allows adding funds to a bank account.
+* From this page, it should be allowed to add funds to a bank account with the number 8881 (the bank account)
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/presecurity-intro-5.5.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+</div>
+
+* If the transfer is successful, a pop-up should appear with some green words.
+**Question:** Input the green words as the answer to this question.
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/presecurity-intro-6.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+</div>
+
+**Answer:** `BANK-HACKED`
+
+**Achievement:**
+* [https://tryhackme.com/room/offensivesecurityintrokK?utm_campaign=social_share&utm_medium=social&utm_content=share-completed-room&utm_source=copy&sharerId=68f5e3baaa4bd512a31cc4b3](https://tryhackme.com/room/offensivesecurityintrokK?utm_campaign=social_share&utm_medium=social&utm_content=share-completed-room&utm_source=copy&sharerId=68f5e3baaa4bd512a31cc4b3)
+
+
 ###### --- End of dirb Method ---
 ###### ------------------------------------------------------------
 ###### --- Gobuster Method ---
+
 * A command-line application called **Gobuster** is used.
 * Gobuster brute-forces FakeBank’s website to find hidden directories and pages.
 
@@ -120,7 +145,6 @@ tags: presecurity review
 * **Security Engineer** – Designs, monitors, and maintains security controls, networks, and systems to prevent cyberattacks.
 
 **Achievement:**
-
 * [https://tryhackme.com/room/offensivesecurityintro?sharerId=68f5e3baaa4bd512a31cc4b3](https://tryhackme.com/room/offensivesecurityintro?sharerId=68f5e3baaa4bd512a31cc4b3)
 
 ---
@@ -221,7 +245,6 @@ tags: presecurity review
 * Investigate suspicious events and protect customers.
 
 ##### What I Did
-
 * Opened **Investigate** on a Web Discovery Attack.
 * Attack details:
   * Started: **July 14, 2025 – 10:21:39 AM**

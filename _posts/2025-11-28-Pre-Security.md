@@ -17,7 +17,7 @@ This TryHackMe teaches the pre-requisites to get started in cyber security by pr
   - [ ] Defensive Security Intro
   - [ ] Careers in Cyber
 - [ ] Network Fundamentals
-  - [ ] what is Networking?
+  - [ ] What is Networking?
   - [ ] Intro to LAN
   - [ ] OSI Model
   - [ ] Packets & Frames
