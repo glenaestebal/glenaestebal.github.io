@@ -12,7 +12,7 @@ featured: false
 This TryHackMe teaches the pre-requisites to get started in cyber security by providing how technology works.
 
 #### Contents
-- [ ] [Introduction to Cyber Security](https://glenaestebal.github.io/blog/2025/Pre-Security-Intro/)  
+- [ ] [Introduction to Cyber Security]({% link _posts/2025-11-29-Pre-Security-Intro.md %})  
   - [ ] Offensive Security Intro
   - [ ] Defensive Security Intro
   - [ ] Careers in Cyber
