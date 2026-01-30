@@ -13,6 +13,7 @@ A beginner-friendly learning path in TryHackMe that provides a strong foundation
 
 
 #### Contents
+- [ ] [Pre-Security]({% link _posts/2025-11-28-Pre-Security.md %})
 - [ ] Introduction
   - [ ] Offensive Security Intro
   - [ ] Defensive Security Intro
