@@ -9,32 +9,80 @@ categories: cybersecurity
 ---
 
 ## I. Pickle Rick
-* This Rick and Morty challenge requires me to:
-  *  exploit a web server and 
-  * find three ingredients to help Rick make his potion and transform himself back into a human from a pickle
+* This Rick and Morty [TryHackMe](https://tryhackme.com/room/picklerick) challenge requires me to:
+  *  exploit a web server; 
+  * and find three ingredients to
+    * help Rick make his potion; 
+    * and transform himself back into a human from a pickle
 
 ### A. What I Did
-1. I deployed the virtual machine and explore the web application
+* I first deployed the virtual machine and explore the web application
 
---- insert pic1 here ---
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/ctf/pickle_rick/1.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+</div>
 
-*  tell the phases of pentesting (recon, scanning, vulnerability assessment, exploitation, and then reporting)
+---
 
-2. i started first scanning the machine for any open ports
+Before going in to the exploration part, I first thought about the phases of Penetration Testing as a guide on what to do first. 
 
---- insert pic2 here ---
+The phases of Penetration Testing is as follows: 
 
-i saw that the SSH port and http port is open so i might explore these two further. 
+**Reconnaissance → Scanning → Vulnerability Analysis → Exploitation → Post-Exploitation → Reporting**
 
-an open port 22 ssh port is an opportunity for later if i have credentials
+* <u>Reconnaissance</u>
+  * learning anything as much as possible about the target 
+  * *examples*: DNS records, WHOIS, Public IPs, OSINT, ping sweeps, port scanning)
+* <u>Scanning and Enumeration</u>
+  * identifying vulnerabilities
+  * *examples*: port scanning, service and version detection, OS detection, user enumeration
+  * *tools that can be used*: nmap
+* <u>Vulnerability Analysis</u>
+  * identifying weaknesses that can be exploited with the discovered vulnerabilities
+  * *examples*: using known CVEs, misconfigurations, weak credentials, outdated software, logic flaws
+  * *tools that can be used*: Nessus, OpenVas, Nikto
+* <u>Exploitation</u>
+  * gaining unauthorized access
+  * *examples*: password attacks, web exploits
+  * *tools that can be used*: Metasploit
+* <u>Post-Exploitation</u>
+  * seeing how far this attack can go by:
+    * escalating privileges, moving laterally, credential dumping, accessing sensitive data
+  * *example*: escalating from a low-privilege user to root/admin
+* <u>Reporting</u>
+  * reporting findings of vulnerabilities found, risk levels, impact, and even recommendations
 
-on the other hand, an open port 80 http port can be a good starting place as I can do a lot in that area
+---
 
-typing in the ip address in a firefox browser showed me this web page
---- insert pic 3 ---
+* With that, I first started scanning the machine for any open ports
 
-viewing its page source code showed me this
---- insert pic 4 ---
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/ctf/pickle_rick/2.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+</div>
+
+I saw that the SSH port and http port is open so I might explore these two further. 
+
+An open SSH port (port 22) is an opportunity for later if I have credentials. On the other hand, an open HTTP port (port 80) can be a good starting place as I can do a lot in that area.
+
+Typing in the ip address in a Firefox browser showed me this web page.
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/ctf/pickle_rick/3.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+</div>
+
+Trying to view its page source code showed me this:
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/ctf/pickle_rick/4.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+</div>
 
 it doesnt really show anything except for a username. i'll take note of this for later
 
