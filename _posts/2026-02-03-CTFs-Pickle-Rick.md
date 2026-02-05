@@ -84,96 +84,174 @@ Trying to view its page source code showed me this:
     </div>
 </div>
 
-it doesnt really show anything except for a username. i'll take note of this for later
+It doesnt really show anything except for a username. I'll take note of this for later
 
-the next thing i can do now that i have a web page is to look for directories i can access using dirb
+The next thing I can do now that I have a web page is to look for directories I can access using a tool called `dirb`.
 
---- insert pic5 ---
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/ctf/pickle_rick/5.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+</div>
 
-i found out that i can access these webpages. let's see what i can find from these
+I found out that I can access these webpages. Let's see what I can find from these.
 
-i found this on the robots.txt path from earlier. a quick google search told me that a robots.txt file tells search engine crawlers to not go there, as per the Robots Exclusion Protocol. 
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/ctf/pickle_rick/6.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+</div>
 
-With that, developers accidentally use it as hide stuff list that reads to pentesters as "please attack these first". it's basically a page where developers don't want people to look at. so it must be important hehe let's take note of this for later
+I found this on the `robots.txt` path from earlier. A quick google search told me that a `robots.txt` file tells search engine crawlers to not go there, as per the Robots Exclusion Protocol. 
 
---- insert pic6---
+With that, developers accidentally use it as hide stuff list that reads to pentesters as "please attack these first". It's basically a page where developers don't want people to look at. So, it must be important hehe let's take note of this for later.
 
-it wasnt much so i maybe i might be missing something. i tried to look at the documentation of dirb and figured out a more specific command i can try. 
+It wasnt much so maybe I might be missing something. I tried to look at the documentation of `dirb` and figured out a more specific command I can try.
 
-one example i can try is to append the `-X` command to also look for webpages that have different extensions. 
---- insert pic 10 ---
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/ctf/pickle_rick/10.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+</div>
 
-a quick google search later for the different extensions for webpages show the following: php, html, js, txt, bak, old, zip, env. so we will use these first.
+One example I can try is to append the `-X` command to also look for webpages that have different extensions. 
 
-the command `chuchu` showed that i can access these webpages. 
---- pic 11---
+A quick google search later for the different extensions for webpages show the following: `php`, `html`, `js`, `txt`, `bak`, `old`, `zip`, `env`. So, I will use these first.
 
-going to the login.php page directly showed me this login page
---- pic 12---
+The command `dirb [target site] -X .php` showed that I can access these webpages.
 
-if i remember clearly, when i checked the source code of the page, there showed a username. I can also try to use the random word i saw earlier in the /robots.txt page.
---- pic 13 ---
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/ctf/pickle_rick/11.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+</div>
 
-and i got in!
---- pic 14 ---
+Going to the `login.php` page directly showed me this login page.
 
-it says command panel so maybe i can try some commands. i typed in `dir -a` and it showed the following
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/ctf/pickle_rick/12.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+</div>
 
---- pic 15 ---
+If I remember clearly, when I checked the source code of the page, there showed a username. I can also try to use the random word I saw earlier in the `/robots.txt` page.
 
-these are all web pages from the website. maybe i can access them by appending the file names to the path of the website, starting from the most suspicious file name
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/ctf/pickle_rick/13.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+</div>
 
-`http://10.48.176.26/Sup3rS3cretPickl3Ingred.txt`
+And i got in!
 
-and it showed this: our first ingredient!
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/ctf/pickle_rick/14.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+</div>
 
---- pic 16 ---
+It says `command panel` so maybe I can try some commands. I typed in `dir -a` and it showed the following:
 
-for finding out the next ingredient, i accessed the /clue.txt page and it showed this
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/ctf/pickle_rick/15.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+</div>
 
---- pic 17 ---
+These are all web pages from the website. maybe i can access them by appending the file names to the path of the website, starting from the most suspicious file name: `http://10.48.176.26/Sup3rS3cretPickl3Ingred.txt`
 
-the linux file system is how linux organizes, storers, and accesses files and directories.
+And it showed this: the first ingredient!
 
-/      → everything
-/etc   → configs
-/home  → users
-/var   → logs & web data
-/tmp   → temporary stuff
-/bin   → commands
-/root  → admin home
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/ctf/pickle_rick/16.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+</div>
 
-i can start by going through those directories
+For finding out the next ingredient, I accessed the `/clue.txt` page and it showed this:
 
-trying `dir / -a` showed the directories of the filesystem
---- pic 18 ---
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/ctf/pickle_rick/17.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+</div>
 
-next, i tried if i can use `sudo -l` and use its privileges. and i can!
---- pic 23 ---
+Now, the Linux File System is how Linux organizes, storers, and accesses files and directories.
 
-so i tried `sudo dir /root -a` and it showed me this
---- pic 24 ---
+* /      → everything
+* /etc   → configs
+* /home  → users
+* /var   → logs & web data
+* /tmp   → temporary stuff
+* /bin   → commands
+* /root  → admin home
 
-i tried to use the command `sudo cat /root/3rd.text` to try to display its contents as i think that is the 3rd ingredient but it showed me this
---- pic 25 ---
+I can start by going through those directories
+
+Trying `dir / -a` showed the directories of the filesystem
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/ctf/pickle_rick/18.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+</div>
+
+Trying `dir /home -a` showed rick's account. let's try to snoop there.
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/ctf/pickle_rick/19.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+</div>
+
+Trying `dir /home/rick -a` showed this
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/ctf/pickle_rick/20.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+</div>
+
+I tried the command `cat /home/rick/second\ ingredients` to display its contents and it showed me this:
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/ctf/pickle_rick/21.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+</div>
 
 since this is clearly a file, i can try to use `less` and `more` to view it. `more` didn't work. but `less` did.
 
-`sudo less /root/3rd.txt`
+I tried the command `less /home/rick/second\ ingredients` to display its contents and it showed me this
 
-and it showed me the 3rd ingredient!
---- pic 26 ---
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/ctf/pickle_rick/22.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+</div>
 
-trying to find the second ingredient led me back outside the /root directory. another directory i can try is the /home directory. 
+Next, I tried if I can use `sudo -l` so I can escalate my own privileges. and I can!
 
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/ctf/pickle_rick/23.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+</div>
 
-trying `dir /home -a` showed rick's account. let's try to snoop there
---- pic 19 ---
+So, I tried `sudo dir /root -a` and it showed me this
 
-trying `dir /home/rick -a` showed this
---- pic 20 ---
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/ctf/pickle_rick/24.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+</div>
 
-i tried the command `less /home/rick/second\ ingredients` to display its contents and it showed me this
---- pic 22 ---
+I tried to use the command `sudo less /root/3rd.text` to try to display its contents as i think that is the 3rd ingredient and it showed me the 3rd ingredient!
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/ctf/pickle_rick/25.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+</div>
 
 After inputting these answers in the answer fields, I finished the Pickle Rick CTF and turned Rick back into a human!
