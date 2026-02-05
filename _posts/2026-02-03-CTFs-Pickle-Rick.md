@@ -5,17 +5,19 @@ date: 2026-02-03
 description: a Rick and Morty CTF, Rick needs help turning back into a human
 tags: CTFs
 categories: cybersecurity
+toc:
+  beginning: true
 # thumbnail: assets/img/9.jpg
 ---
 
-## I. Pickle Rick
 * This Rick and Morty [TryHackMe](https://tryhackme.com/room/picklerick) challenge requires me to:
   *  exploit a web server; 
   * and find three ingredients to
     * help Rick make his potion; 
     * and transform himself back into a human from a pickle
 
-### A. What I Did
+--- 
+
 * I first deployed the virtual machine and explore the web application
 
 <div class="row mt-3">
@@ -55,6 +57,7 @@ The phases of Penetration Testing is as follows:
   * reporting findings of vulnerabilities found, risk levels, impact, and even recommendations
 
 ---
+#### Scanning
 
 * With that, I first started scanning the machine for any open ports
 
@@ -64,11 +67,15 @@ The phases of Penetration Testing is as follows:
     </div>
 </div>
 
-I saw that the SSH port and http port is open so I might explore these two further. 
+I saw that the SSH port and HTTP port is open so I might explore these two further.
+
+--- 
+
+#### Vulnerability Analysis
 
 An open SSH port (port 22) is an opportunity for later if I have credentials. On the other hand, an open HTTP port (port 80) can be a good starting place as I can do a lot in that area.
 
-Typing in the ip address in a Firefox browser showed me this web page.
+Typing in the IP address in a Firefox browser showed me this web page.
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
@@ -93,6 +100,10 @@ The next thing I can do now that I have a web page is to look for directories I 
         {% include figure.liquid loading="eager" path="assets/img/ctf/pickle_rick/5.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
+
+---
+
+#### Exploitation
 
 I found out that I can access these webpages. Let's see what I can find from these.
 
@@ -142,7 +153,7 @@ If I remember clearly, when I checked the source code of the page, there showed 
     </div>
 </div>
 
-And i got in!
+And I got in!
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
@@ -158,7 +169,7 @@ It says `command panel` so maybe I can try some commands. I typed in `dir -a` an
     </div>
 </div>
 
-These are all web pages from the website. maybe i can access them by appending the file names to the path of the website, starting from the most suspicious file name: `http://10.48.176.26/Sup3rS3cretPickl3Ingred.txt`
+These are all web pages from the website. Maybe i can access them by appending the file names to the path of the website, starting from the most suspicious file name: `http://10.48.176.26/Sup3rS3cretPickl3Ingred.txt`
 
 And it showed this: the first ingredient!
 
@@ -176,7 +187,11 @@ For finding out the next ingredient, I accessed the `/clue.txt` page and it show
     </div>
 </div>
 
-Now, the Linux File System is how Linux organizes, storers, and accesses files and directories.
+---
+
+#### Post-Exploitation
+
+Now, the Linux File System is how Linux organizes, stores, and accesses files and directories.
 
 * /      → everything
 * /etc   → configs
@@ -196,7 +211,7 @@ Trying `dir / -a` showed the directories of the filesystem
     </div>
 </div>
 
-Trying `dir /home -a` showed rick's account. let's try to snoop there.
+Trying `dir /home -a` showed rick's account. Let's try to snoop there.
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
@@ -204,7 +219,7 @@ Trying `dir /home -a` showed rick's account. let's try to snoop there.
     </div>
 </div>
 
-Trying `dir /home/rick -a` showed this
+Trying `dir /home/rick -a` showed this:
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
@@ -220,9 +235,9 @@ I tried the command `cat /home/rick/second\ ingredients` to display its contents
     </div>
 </div>
 
-since this is clearly a file, i can try to use `less` and `more` to view it. `more` didn't work. but `less` did.
+Since this is clearly a file, I can try to use `less` and `more` to view it. The command `more` didn't work, but `less` did.
 
-I tried the command `less /home/rick/second\ ingredients` to display its contents and it showed me this
+I tried the command `less /home/rick/second\ ingredients` to display its contents and it showed me this:
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
@@ -230,7 +245,9 @@ I tried the command `less /home/rick/second\ ingredients` to display its content
     </div>
 </div>
 
-Next, I tried if I can use `sudo -l` so I can escalate my own privileges. and I can!
+I got the 2nd ingredient!
+
+Next, I tried if I can use `sudo -l` so I can escalate my own privileges. And I can!
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
@@ -238,7 +255,7 @@ Next, I tried if I can use `sudo -l` so I can escalate my own privileges. and I 
     </div>
 </div>
 
-So, I tried `sudo dir /root -a` and it showed me this
+So, I tried `sudo dir /root -a` and it showed me this:
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
@@ -246,7 +263,7 @@ So, I tried `sudo dir /root -a` and it showed me this
     </div>
 </div>
 
-I tried to use the command `sudo less /root/3rd.text` to try to display its contents as i think that is the 3rd ingredient and it showed me the 3rd ingredient!
+I tried to use the command `sudo less /root/3rd.text` to try to display its contents as I think that is the 3rd ingredient and it showed me the 3rd ingredient!
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
