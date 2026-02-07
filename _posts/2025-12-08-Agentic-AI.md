@@ -3,9 +3,9 @@ layout: post
 title: Agentic AI
 date: 2025-12-08
 description: a course on using, understanding, and building AI agents
-tags: AI
+tags: agentic-ai
 # categories: sample-posts
-categories: agentic-ai
+categories: AI
 ---
 
 I'm learning Agentic AI on a free course in <a href = 'https://huggingface.co/learn/agents-course/unit0/introduction'> huggingface.co </a> that discusses AI agents in theory, design, and practice and how agents work and how to build our own Agents using the latest libraries and tools.
