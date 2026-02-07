@@ -271,4 +271,12 @@ I tried to use the command `sudo less /root/3rd.text` to try to display its cont
     </div>
 </div>
 
+---
+
 After inputting these answers in the answer fields, I finished the Pickle Rick CTF and turned Rick back into a human!
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/ctf/pickle_rick/27.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+</div>
