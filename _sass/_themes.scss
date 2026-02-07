@@ -60,7 +60,8 @@
   }
 
   #back-to-top {
-    color: var(--global-back-to-top-text-color);
+    // color: var(--global-back-to-top-text-color);
+    color: var(--global-theme-color);
     background: var(--global-back-to-top-bg-color);
     bottom: $back-to-top-bottom;
     right: $back-to-top-right;
