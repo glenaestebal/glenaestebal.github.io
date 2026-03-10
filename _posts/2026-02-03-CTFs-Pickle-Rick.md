@@ -6,7 +6,7 @@ description: a Rick and Morty CTF, Rick needs help turning back into a human
 tags: CTFs
 categories: cybersecurity
 toc:
-  beginning: true
+    sidebar: right
 # thumbnail: assets/img/9.jpg
 ---
 

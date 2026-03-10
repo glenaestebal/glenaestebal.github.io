@@ -9,7 +9,7 @@ giscus_comments: false
 related_posts: true
 pretty_table: true
 toc:
-  beginning: true
+  sidebar: right
 ---
 
 ## The Linux File System

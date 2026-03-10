@@ -9,12 +9,12 @@ categories: networks
 featured: false
 ---
 
-The <a href = "https://www.netacad.com/courses/networking-basics?courseLang=en-US"> Networking Basics </a> self-paced course in Cisco Networking Academy teaches the fundamentals of computer networking, including how networks operate and the core concepts behind them. It covers essential networking ideas and the basic skills required to set up and manage a small office or home office (SOHO) network. Through these topics, the course aims to give learners an engaging and exploratory understanding of networks, including how the internet works and how different devices communicate within a network.
+The <a href = "https://www.netacad.com/courses/networking-basics?courseLang=en-US"> Networking Basics </a> self-paced course in <a href = "https://www.netacad.com/">Cisco Networking Academy</a> teaches the fundamentals of computer networking, including how networks operate and the core concepts behind them. It covers essential networking ideas and the basic skills required to set up and manage a small office or home office (SOHO) network. Through these topics, the course aims to give learners an engaging and exploratory understanding of networks, including how the internet works and how different devices communicate within a network.
 
 
 #### Contents
-- [x] [Module 1: Communications in a Connected World]({% link _posts/2026-02-15-NB-1-Communications-in-a-Connected-World.md %})
-- [ ] Module 2: Network Components, Types, and Connections
+- [x] [Module 1: Communications in a Connected World]({% link _posts/2026-02-15-NB-1.md %})
+- [x] [Module 2: Network Components, Types, and Connections]({% link _posts/2026-02-18-NB-2.md %}) 
 - [ ] Module 3: Wireless and Mobile Networks
 - [ ] Module 4: Building a Home Network
   - [ ] Packet Tracer Activity: Building a Home Network
