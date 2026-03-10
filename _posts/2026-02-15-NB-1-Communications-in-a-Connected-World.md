@@ -72,6 +72,12 @@ toc:
   - Networks come in many sizes.
   - They can range from **two computers** to **hundreds of thousands of devices**.
 
+  * Small Home Networks
+    - Connect a few devices together such as:
+      - Computers
+      - Printers
+      - Internet connection
+
   * Small Office/Home Office (SOHO) Networks
     - Used in small offices or homes.
     - Allow sharing of resources such as:
@@ -84,14 +90,6 @@ toc:
       - Email
       - Instant messaging
     - Provide centralized access to information stored on servers.
-
-  * Small Home Networks
-    - Connect a few devices together such as:
-      - Computers
-      - Printers
-      - Internet connection
-  
-  * Small Office and Home Office Networks (SOHO)
     - Allow home or remote office computers to connect to a **corporate network**.
     - Enable access to **centralized shared resources**.
   
@@ -104,6 +102,21 @@ toc:
   * Worldwide Networks
     - The **internet** itself.
     - A **network of networks** connecting millions of computers worldwide.
+
+<div class="row mt-3">
+    <div class="col-md-3 col-sm-6 mt-3">
+        {% include figure.liquid loading="eager" path="assets/img/networking_basics/nb1/1.jpg" class="img-fluid rounded z-depth-1" zoomable=true caption="Small Home Networks" %}
+    </div>
+    <div class="col-md-3 col-sm-6 mt-3">
+        {% include figure.liquid loading="eager" path="assets/img/networking_basics/nb1/2.jpg" class="img-fluid rounded z-depth-1" zoomable=true caption="Small Office and Home Office Networks (SOHO)" %}
+    </div>
+    <div class="col-md-3 col-sm-6 mt-3">
+        {% include figure.liquid loading="eager" path="assets/img/networking_basics/nb1/3.jpg" class="img-fluid rounded z-depth-1" zoomable=true caption="Medium to Large Networks" %}
+    </div>
+    <div class="col-md-3 col-sm-6 mt-3">
+        {% include figure.liquid loading="eager" path="assets/img/networking_basics/nb1/4.jpg" class="img-fluid rounded z-depth-1" zoomable=true caption ="World Wide Networks"%}
+    </div>
+</div>
 
 ---
 
@@ -180,6 +193,12 @@ Examples:
     - Wi-Fi wireless connections
 
   * Large networks often use **fiber-optic cables** for longer distances.
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/networking_basics/nb1/5.jpg" class="img-fluid rounded z-depth-1" zoomable=true caption="Methods of Signal Transmission" %}
+    </div>
+</div>
 
 ---
 
