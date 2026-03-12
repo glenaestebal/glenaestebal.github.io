@@ -16,7 +16,7 @@ The <a href = "https://www.netacad.com/courses/networking-basics?courseLang=en-U
 - [x] [Module 1: Communications in a Connected World]({% link _posts/2026-02-15-NB-1.md %})
 - [x] [Module 2: Network Components, Types, and Connections]({% link _posts/2026-02-18-NB-2.md %}) 
 - [x] [Module 3: Wireless and Mobile Networks]({% link _posts/2026-02-21-NB-3.md %})
-- [ ] Module 4: Building a Home Network
+- [x] [Module 4: Building a Home Network]({% link _posts/2026-02-24-NB-4.md %})
   - [ ] Packet Tracer Activity: Building a Home Network
 - [ ] Module 5: Communication Principles
 - [ ] Module 6: Network Media
