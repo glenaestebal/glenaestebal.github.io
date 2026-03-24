@@ -91,8 +91,11 @@ document.getElementById('fileInput').addEventListener('change', function(event) 
         genre: row[3] || "Unknown"
       }));
 
-    parsedBooks.forEach(book => displayBook(book));
+    // parsedBooks.forEach(book => displayBook(book));
+    // books = books.concat(parsedBooks);
+
     books = books.concat(parsedBooks);
+    renderBookList();
 
     const message = document.getElementById('uploadMessage');
     message.innerText = parsedBooks.length + " books loaded from Goodreads! 🎉";
@@ -108,104 +111,143 @@ document.getElementById('fileInput').addEventListener('change', function(event) 
 
 // Manual add
 function addBook() {
-  const title = document.getElementById('title').value.trim();
-  const author = document.getElementById('author').value.trim();
-  const genre = document.getElementById('genre').value.trim();
+    const title = document.getElementById('title').value.trim();
+    const author = document.getElementById('author').value.trim();
+    const genre = document.getElementById('genre').value.trim();
 
-  if (!title || !author) {
-    const msg = document.getElementById('manualMessage');
-    msg.innerText = "Please enter at least title and author!";
-    setTimeout(() => { msg.innerText = ""; }, 4000);
+    if (!title || !author) {
+        const msg = document.getElementById('manualMessage');
+        msg.innerText = "Please enter at least title and author!";
+        setTimeout(() => { msg.innerText = ""; }, 4000);
 
-    return;
-  }
+        return;
+    }
 
-  const book = { title, author, genre };
-  books.push(book);
+    const book = { title, author, genre };
+    books.push(book);
 
-  displayBook(book); // add to visible list
+    renderBookList();
+    // displayBook(book); // add to visible list
 
-  // Clear inputs
-  document.getElementById('title').value = "";
-  document.getElementById('author').value = "";
-  document.getElementById('genre').value = "";
+    // Clear inputs
+    document.getElementById('title').value = "";
+    document.getElementById('author').value = "";
+    document.getElementById('genre').value = "";
 }
 
 // Display book in list with delete button
-function displayBook(book) {
-  const list = document.getElementById('bookList');
+// function displayBook(book) {
+//     const list = document.getElementById('bookList');
 
-  const item = document.createElement('li');
-  item.className = "list-group-item d-flex justify-content-between align-items-center";
+//     const item = document.createElement('li');
+//     item.className = "list-group-item d-flex justify-content-between align-items-center";
 
-  // book info
-  item.innerHTML = `${book.title} by ${book.author} (${book.genre || "No genre"})`;
+//     // book info
+//     item.innerHTML = `${book.title} by ${book.author} (${book.genre || "No genre"})`;
 
-  // delete button
-  const deleteBtn = document.createElement('button');
-  deleteBtn.className = "btn btn-sm";
-  deleteBtn.style.backgroundColor = "#FF7276";
-  deleteBtn.style.color = "black";
-  deleteBtn.style.marginLeft = "10px";
-  deleteBtn.innerText = "Delete ❌";
-  deleteBtn.onclick = function() {
-    // remove from DOM
-    list.removeChild(item);
-    // remove from books array
-    const index = books.indexOf(book);
-    if (index > -1) books.splice(index, 1);
-  };
+//     // delete button
+//     const deleteBtn = document.createElement('button');
+//     deleteBtn.className = "btn btn-sm";
+//     deleteBtn.style.backgroundColor = "#FF7276";
+//     deleteBtn.style.color = "black";
+//     deleteBtn.style.marginLeft = "10px";
+//     deleteBtn.innerText = "Delete ❌";
+//     deleteBtn.onclick = function() {
+//         // remove from DOM
+//         list.removeChild(item);
+//         // remove from books array
+//         const index = books.indexOf(book);
+//         if (index > -1) books.splice(index, 1);
+//     };
 
-  item.appendChild(deleteBtn);
-  list.appendChild(item);
+//     item.appendChild(deleteBtn);
+//     list.appendChild(item);
+// }
+
+function renderBookList() {
+    const list = document.getElementById('bookList');
+    list.innerHTML = ""; // clear current list
+
+    const maxVisible = 10;
+
+    books.slice(0, maxVisible).forEach(book => {
+    const item = document.createElement('li');
+    item.className = "list-group-item d-flex justify-content-between align-items-center";
+
+    item.innerHTML = `${book.title} by ${book.author} (${book.genre || "No genre"})`;
+
+    const deleteBtn = document.createElement('button');
+    deleteBtn.className = "btn btn-sm";
+    deleteBtn.style.backgroundColor = "#FF7276";
+    deleteBtn.style.color = "black";
+    deleteBtn.innerText = "Delete ❌";
+
+    deleteBtn.onclick = function () {
+        const index = books.indexOf(book);
+        if (index > -1) books.splice(index, 1);
+        renderBookList(); // re-render after delete
+    };
+
+    item.appendChild(deleteBtn);
+    list.appendChild(item);
+    });
+
+    // show "... and X more"
+    if (books.length > maxVisible) {
+    const more = document.createElement('li');
+    more.className = "list-group-item text-center";
+    more.style.fontStyle = "italic";
+    more.innerText = `... and ${books.length - maxVisible} more 📚`;
+    list.appendChild(more);
+    }
 }
 
 // Pick random book
 function pickBook() {
-  if (books.length === 0) {
-    const msg = document.getElementById('manualMessage');
-    msg.innerText = "Add or upload books first!";
+    if (books.length === 0) {
+        const msg = document.getElementById('manualMessage');
+        msg.innerText = "Add or upload books first!";
 
-    setTimeout(() => { msg.innerText = ""; }, 4000);
+        setTimeout(() => { msg.innerText = ""; }, 4000);
 
-    return;
-  }
+        return;
+    }
 
-  const randomIndex = Math.floor(Math.random() * books.length);
-  const book = books[randomIndex];
+    const randomIndex = Math.floor(Math.random() * books.length);
+    const book = books[randomIndex];
 
-  document.getElementById('result').innerText =
-    `${book.title} by ${book.author} (Genre: ${book.genre})`;
+    document.getElementById('result').innerText =
+        `${book.title} by ${book.author} (Genre: ${book.genre})`;
 }
 
 // Reroll
 function rerollBook() {
-  if (books.length === 0) {
-    const msg = document.getElementById('manualMessage');
-    msg.innerText = "Add or upload books first!";
-    setTimeout(() => { msg.innerText = ""; }, 4000);
+    if (books.length === 0) {
+        const msg = document.getElementById('manualMessage');
+        msg.innerText = "Add or upload books first!";
+        setTimeout(() => { msg.innerText = ""; }, 4000);
 
-    return;
-  }
+        return;
+    }
 
-  if (!document.getElementById('result').innerText) {
-    const msg = document.getElementById('manualMessage');
-    msg.innerText = "Pick a book first before rerolling!";
-    setTimeout(() => { msg.innerText = ""; }, 4000);
+    if (!document.getElementById('result').innerText) {
+        const msg = document.getElementById('manualMessage');
+        msg.innerText = "Pick a book first before rerolling!";
+        setTimeout(() => { msg.innerText = ""; }, 4000);
 
-    return;
-  }
+        return;
+    }
 
-  let newIndex;
-  const currentBookTitle = document.getElementById('result').innerText.split(" by ")[0];
+    let newIndex;
+    const currentBookTitle = document.getElementById('result').innerText.split(" by ")[0];
 
-  do {
-    newIndex = Math.floor(Math.random() * books.length);
-  } while (books.length > 1 && books[newIndex].title === currentBookTitle);
+    do {
+        newIndex = Math.floor(Math.random() * books.length);
+    } while (books.length > 1 && books[newIndex].title === currentBookTitle);
 
-  const book = books[newIndex];
-  document.getElementById('result').innerText =
-    `${book.title} by ${book.author} (Genre: ${book.genre})`;
+    const book = books[newIndex];
+    document.getElementById('result').innerText =
+        `${book.title} by ${book.author} (Genre: ${book.genre})`;
 }
 </script>
 {% endraw %}

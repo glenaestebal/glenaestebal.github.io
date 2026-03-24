@@ -11,7 +11,7 @@ toc:
   sidebar: right
 ---
 
-### 📖 Welcome to My TBR Picker
+### 📖 Welcome to TBR Picker
 
 <br>This little project is my personal tool to help me get back into my reading habit. Last year I collected so many books, and now I want to finally read them all and make the most of my upcomimg Kobo Clara Colour.
 
