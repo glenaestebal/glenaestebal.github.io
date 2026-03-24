@@ -39,19 +39,18 @@ This guide will help in getting started with TBR Picker for an easy pick on a ne
 This is how the CSV file is structured right now, so do your CSV file exactly like this:
 
 ```text
-title       shelf         author     genre
-cookai      want-to-read  dustie     doggie book
-dustie      read          dustie     doggie book
-chai chai   want-to-read  cookai     doggie book
-cola        want-to-read  cola       doggie book
-coffee      want-to-read  coffee     doggie book
-choco       want-to-read  choco      doggie book
-oreo        read          oreo       cat book
-graham      want-to-read  graham     cat book
-skyflakes   want-to-read  skyflakes  cat book
-tiger       want-to-read  tiger      cat book
-jolly       want-to-read  jolly      cat book
-fita        read          fita       cat book
+title                           shelf               author           genre
+The Silent Garden           want-to-read        Clara Whitmore	    mystery
+Stars Over Maple Street	    read                Julian Hart         contemporary
+The Forgotten Library	    want-to-read        Elena Brooks	    fantasy
+Midnight Train to Nowhere   want-to-read        Daniel Cross	    thriller
+The Last Summer Letter	    read                Mia Holloway	    romance
+The Ocean Between Us	    want-to-read        Lucas Bennett	    contemporary
+A Shadow in the Hall	    want-to-read        Nora Keats          mystery
+The Clockmaker's Secret	    read                Henry Dalton	    historical fiction
+Whispers of the Forest	    want-to-read        Sophia Lang         fantasy
+The Girl Who Stayed         read                Amelia Rowe         drama
+Rain Over Tokyo	            want-to-read        Oliver Chase	    contemporary
 ```
 
 The TBR Picker📖🎲 will then display the books in the `want-to-read` shelf.
