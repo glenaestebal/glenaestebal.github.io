@@ -29,7 +29,7 @@ Link to your social media connections, too. This theme is set up to use [Font Aw
 
 Hi, I’m a Computer Science graduate majoring in Network and Information Security with a passion for network and cybersecurity architecture.
 
-I’m currently focused on upskilling through hands-on projects, certifications, and continuous learning in areas like network engineering, security operations, and GRC (Governance, Risk, and Compliance). My goal is to build a blended career path that bridges the gap between technical execution and strategic security leadership.
+I’m currently focused on upskilling through hands-on projects, certifications, and continuous learning in areas like network engineering, information security operations, and GRC (Governance, Risk, and Compliance). My goal is to build a blended career path that bridges the gap between technical execution and strategic security leadership.
 
 This blog serves as my personal knowledge hub — a place to document my learning journey, project progress, and insights as I grow into a cybersecurity professional. You’ll find write-ups on my coursework, personal research, and experiments that explore how secure systems are designed, implemented, and managed.
 

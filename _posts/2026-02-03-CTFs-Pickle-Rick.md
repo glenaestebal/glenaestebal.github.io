@@ -2,7 +2,7 @@
 layout: post
 title: CTFs - Pickle Rick
 date: 2026-02-03
-description: a Rick and Morty CTF, Rick needs help turning back into a human
+description: A Rick and Morty CTF, Rick needs help turning back into a human
 tags: CTFs
 categories: cybersecurity
 toc:

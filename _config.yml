@@ -212,7 +212,12 @@ announcements:
 latest_posts:
   enabled: true
   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
-  limit: # leave blank to include all the blog posts
+  limit: 5 # leave blank to include all the blog posts
+
+latest_projects:
+  enabled: true
+  scrollable: true # adds a vertical scroll bar if there are more than 3 projects items
+  limit: 5 # leave blank to include all the projects in the `_projects` folder
 
 # -----------------------------------------------------------------------------
 # Jekyll settings
@@ -313,7 +318,7 @@ jekyll-archives:
 # display_tags: ["tools-and-commands", " cybersecurity-101", "agentic-ai", "CTFs"] # these tags will be displayed on the front page of your blog
 # display_categories: ["external-services"] # these categories will be displayed on the front page of your blog
 # display_categories: ["posts"]
-display_categories: ["Cybersecurity", "AI", "Linux", "Networks"]
+display_categories: ["Cybersecurity", "AI", "Linux", "Networks", "Personal"]
 
 
 # -----------------------------------------------------------------------------

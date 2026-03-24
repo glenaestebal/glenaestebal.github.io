@@ -2,7 +2,7 @@
 layout: post
 title: Linux File System and Commands
 date: 2026-02-05
-description: a list of Linux commands and an overview of the Linux File System
+description: A list of Linux commands and an overview of the Linux File System
 tags: tools-and-commands
 categories: cybersecurity
 giscus_comments: false

@@ -2,7 +2,7 @@
 layout: post
 title: Agentic AI
 date: 2025-12-08
-description: a course on using, understanding, and building AI agents
+description: A course on using, understanding, and building AI agents
 tags: agentic-ai
 # categories: sample-posts
 categories: AI

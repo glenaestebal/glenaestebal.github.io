@@ -2,7 +2,7 @@
 layout: post
 title: Pre Security
 date: 2025-11-28
-description: learning path for the pre-requisite technical nowledge to get started in cyber security
+description: Learning path for the pre-requisite technical nowledge to get started in cyber security
 tags: presecurity review
 # categories: sample-posts
 categories: cybersecurity

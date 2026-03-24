@@ -2,7 +2,7 @@
 layout: post
 title: Networking Basics (NB)
 date: 2026-02-12
-description: introduction to fundamental networking concepts, network operations, and basic SOHO network setup and management
+description: Introduction to fundamental networking concepts, network operations, and basic SOHO network setup and management
 tags: networks review
 # categories: sample-posts
 categories: networks

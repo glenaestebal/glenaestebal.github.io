@@ -2,7 +2,7 @@
 layout: post
 title: Pre Security - Introduction to Cybersecurity
 date: 2025-11-29
-description: an introduction to pre-security
+description: An introduction to pre-security
 tags: presecurity review
 # categories: sample-posts
 # thumbnail: assets/img/9.jpg
